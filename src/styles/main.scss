@@ -11,13 +11,13 @@ body {
 .calendar {
   max-width: $calendar-width;
   display: flex;
-  column-count: $day-in-row;
+  column-count: flex-grow;
   flex-wrap: wrap;
   gap: $gap;
 
-  @for $i from 28 through 31 {
+  @for $i from 28 through 32 {
     &--month-length-#{$i} {
-      .calendar__day:nth-last-child(-n + #{31 - $i }) {
+      .calendar__day:nth-last-child(-n + #{32 - $i }) {
         display: none;
       }
     }
